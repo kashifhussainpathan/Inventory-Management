@@ -1,0 +1,134 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --color-scheme: light dark;
+  --text-color: #f1f5f9;
+  --background-color: #020617;
+  --box-shodow-color: #1e293b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4rem 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--box-shodow-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input,
+select,
+option,
+button {
+  cursor: pointer;
+}
+
+input,
+label,
+select,
+textarea {
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+input,
+select,
+textarea {
+  padding: 0.4rem 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea::placeholder {
+  font-size: 0.9rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px 2px var(--box-shodow-color);
+  background-color: var(--box-shodow-color);
+}
+
+form button {
+  margin: 0.8rem 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid var(--text-color);
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Utility Classes */
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+/* ************ Media Queries*************** */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
