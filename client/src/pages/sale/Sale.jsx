@@ -1,3 +1,4 @@
+import "./sale.css";
 import React from "react";
 import { useDispatch } from "react-redux";
 
@@ -18,7 +19,7 @@ const Sale = () => {
   const isSalesLoading = salesState("isSalesLoading");
 
   return (
-    <div>
+    <div className="flex sale">
       {/* {showSaleModal && (
         <Modal
           closeModal={() => handleCloseSaleModal(dispatch)}
@@ -28,7 +29,7 @@ const Sale = () => {
 
       <SaleForm />
 
-      <button onClick={() => handleShowSaleForm(dispatch)}>Record Sale</button>
+      {/* <button onClick={() => handleShowSaleForm(dispatch)}>Record Sale</button> */}
 
       <div>
         <table>

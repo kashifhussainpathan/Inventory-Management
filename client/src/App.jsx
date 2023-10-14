@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/home/Home";
 import Sale from "./pages/sale/Sale";
 import Login from "./components/Login";
 import Singup from "./components/Signup";
 import { useDispatch } from "react-redux";
+import Navbar from "./components/navbar/Navbar";
 import { userState } from "./actions/user.action";
 import { fetchUser } from "./services/user.service";
 import { getAllSales } from "./actions/Sale.action";
@@ -32,22 +33,21 @@ function App() {
   }, [user]);
 
   return (
-    <>
+    <div>
       <ToasterComponent />
 
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/login">Login</NavLink>
-      <NavLink to="/sale">Sale</NavLink>
-      <NavLink to="/inventory">Inventory</NavLink>
+      <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sale" element={<Sale />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/inventory" element={<Inventory />} />
-        {!isLoggedIn && <Route path="/signup" element={<Singup />} />}
-      </Routes>
-    </>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sale" element={<Sale />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/signup" element={<Singup />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

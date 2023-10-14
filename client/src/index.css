@@ -13,9 +13,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  margin: 0;
 }
 
 a {
@@ -117,6 +122,18 @@ th {
   justify-content: center;
   align-items: center;
   height: 95vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* app styles */
+
+.app {
+  padding: 0 5rem;
 }
 
 /* ************ Media Queries*************** */

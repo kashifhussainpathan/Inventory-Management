@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
 
-const API_URL = "http://localhost:4000/sale";
+const API_URL = "https://inventory-management-ae62.onrender.com/sale";
 
 export const salesState = (propertyName) =>
   useSelector((state) => state.salesState[propertyName]);

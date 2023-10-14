@@ -5,7 +5,7 @@ import {
   setInventoriesLoading,
 } from "../actions/inventory.action";
 
-const API_URL = "http://localhost:4000/inventory";
+const API_URL = "https://inventory-management-ae62.onrender.com/inventory";
 
 export const getAllInventories = async (userId, dispatch) => {
   try {
