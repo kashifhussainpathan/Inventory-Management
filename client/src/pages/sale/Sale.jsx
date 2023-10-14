@@ -20,16 +20,13 @@ const Sale = () => {
 
   return (
     <div className="flex sale">
-      {/* {showSaleModal && (
-        <Modal
-          closeModal={() => handleCloseSaleModal(dispatch)}
-          key="sale"
-        ></Modal>
-      )} */}
+      {showSaleModal && (
+        <Modal closeModal={() => handleCloseSaleModal(dispatch)} key="sale">
+          <SaleForm />
+        </Modal>
+      )}
 
-      <SaleForm />
-
-      {/* <button onClick={() => handleShowSaleForm(dispatch)}>Record Sale</button> */}
+      <button onClick={() => handleShowSaleForm(dispatch)}>Record Sale</button>
 
       <div>
         <table>

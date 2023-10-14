@@ -33,7 +33,7 @@ function App() {
   }, [user]);
 
   return (
-    <div>
+    <>
       <ToasterComponent />
 
       <Navbar />
@@ -47,7 +47,7 @@ function App() {
           <Route path="/signup" element={<Singup />} />
         </Routes>
       </div>
-    </div>
+    </>
   );
 }
 

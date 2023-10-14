@@ -6,6 +6,7 @@ import {
   addSale,
   editSale,
   salesState,
+  setIsSaleEdit,
   setShowSaleModal,
 } from "../actions/Sale.action";
 import { handleSaleInputs } from "../utils/sale.utils";
@@ -22,6 +23,7 @@ const SaleForm = () => {
       dispatch(addSale({ ...saleInputs, userId: user._id }));
     } else {
       dispatch(editSale(saleInputs._id, saleInputs));
+      dispatch(setIsSaleEdit(false));
     }
     dispatch(setShowSaleModal(false));
   };

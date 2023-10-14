@@ -1,4 +1,4 @@
-const salesInitialState = {
+const initialState = {
   sales: [],
   isSaleEdit: false,
   isSalesLoading: false,
@@ -6,7 +6,7 @@ const salesInitialState = {
   saleInputs: { description: "", amount: "" },
 };
 
-const saleReducer = (state = salesInitialState, action) => {
+const salesReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -45,4 +45,4 @@ const saleReducer = (state = salesInitialState, action) => {
   }
 };
 
-export default saleReducer;
+export default salesReducer;

@@ -21,6 +21,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -115,6 +116,14 @@ th {
   text-transform: capitalize;
 }
 
+td {
+  width: 200px;
+}
+
+thead {
+  border-bottom: 2px solid;
+}
+
 /* Utility Classes */
 .auth {
   display: flex;
@@ -128,6 +137,17 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tableBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tableBtn span {
+  cursor: pointer;
 }
 
 /* app styles */
