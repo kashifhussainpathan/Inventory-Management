@@ -3,7 +3,7 @@ import {
   setSaleInputs,
   setIsSaleEdit,
   setShowSaleModal,
-} from "../actions/Sale.action";
+} from "../actions/sale.action";
 
 export const handleSaleInputs = (e, dispatch, saleInputs) => {
   const { name, value } = e.target;

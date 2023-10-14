@@ -10,7 +10,7 @@ import {
 } from "../../utils/sale.utils";
 import Modal from "../../components/modal/Modal";
 import SaleForm from "../../components/SaleForm";
-import { salesState } from "../../actions/Sale.action";
+import { salesState } from "../../actions/sale.action";
 
 const Sale = () => {
   const dispatch = useDispatch();

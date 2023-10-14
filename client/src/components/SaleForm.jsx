@@ -8,7 +8,7 @@ import {
   salesState,
   setIsSaleEdit,
   setShowSaleModal,
-} from "../actions/Sale.action";
+} from "../actions/sale.action";
 import { handleSaleInputs } from "../utils/sale.utils";
 
 const SaleForm = () => {
