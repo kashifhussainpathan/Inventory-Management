@@ -10,7 +10,7 @@ dotenv.config({ path: "./config.env" });
 connectDatabase();
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "*",
 };
 
 const app = express();
