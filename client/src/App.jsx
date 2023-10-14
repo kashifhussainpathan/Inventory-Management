@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import Navbar from "./components/navbar/Navbar";
 import { userState } from "./actions/user.action";
 import { fetchUser } from "./services/user.service";
-import { getAllSales } from "./actions/Sale.action";
+import { getAllSales } from "./actions/sale.action";
 import Inventory from "./pages/inventory/Inventory";
 import ToasterComponent from "./components/Toaster";
 import { isLoggedIn, token } from "./utils/app.utils";
