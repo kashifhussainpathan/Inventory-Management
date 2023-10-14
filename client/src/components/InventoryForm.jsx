@@ -1,7 +1,6 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { userState } from "../actions/user.action";
 import { addInventory } from "../services/inventory.service";
 import { handleInventoryInputs } from "../utils/inventory.utils";
 import {
@@ -11,7 +10,6 @@ import {
 } from "../actions/inventory.action";
 
 const InventoryForm = () => {
-  const user = userState("user");
   const dispatch = useDispatch();
   const isInventoryEdit = inventoryState("isInventoryEdit");
   const inventoriesInputs = inventoryState("inventoryInputs");
@@ -19,7 +17,7 @@ const InventoryForm = () => {
   const handleAddInventoryItemCLick = (e) => {
     e.preventDefault();
     if (!isInventoryEdit) {
-      addInventory({ ...inventoriesInputs, userId: user._id }, dispatch);
+      addInventory({ ...inventoriesInputs }, dispatch);
     } else {
       dispatch(editInventory(inventoriesInputs._id, inventoriesInputs));
     }

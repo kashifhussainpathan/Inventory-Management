@@ -41,11 +41,11 @@ export const setIsSaleEdit = (status) => {
   };
 };
 
-export const getAllSales = (userId) => async (dispatch) => {
+export const getAllSales = () => async (dispatch) => {
   try {
     dispatch(setSalesLoading(true));
 
-    const response = await axios.get(`${API_URL}/${userId}`);
+    const response = await axios.get(`${API_URL}`);
 
     if (response.status === 200) {
       const sales = response.data.sales;

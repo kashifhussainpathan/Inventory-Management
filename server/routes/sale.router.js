@@ -30,10 +30,9 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:userId", async (req, res) => {
-  const userId = req.params.userId;
+router.get("/", async (req, res) => {
   try {
-    const allSales = await getSales(userId);
+    const allSales = await getSales();
 
     if (allSales.length >= 0) {
       res.status(200).json({

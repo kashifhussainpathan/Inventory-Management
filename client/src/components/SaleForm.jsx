@@ -1,7 +1,6 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { userState } from "../actions/user.action";
 import {
   addSale,
   editSale,
@@ -13,14 +12,13 @@ import { handleSaleInputs } from "../utils/sale.utils";
 
 const SaleForm = () => {
   const dispatch = useDispatch();
-  const user = userState("user");
   const isSaleEdit = salesState("isSaleEdit");
   const saleInputs = salesState("saleInputs");
 
   const handleAddSaleItemClick = (e) => {
     e.preventDefault();
     if (!isSaleEdit) {
-      dispatch(addSale({ ...saleInputs, userId: user._id }));
+      dispatch(addSale(saleInputs));
     } else {
       dispatch(editSale(saleInputs._id, saleInputs));
       dispatch(setIsSaleEdit(false));

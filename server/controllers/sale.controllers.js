@@ -1,8 +1,8 @@
 import Sale from "../models/sale.model.js";
 
-export const getSales = async (userId) => {
+export const getSales = async () => {
   try {
-    const allSales = await Sale.find({ userId });
+    const allSales = await Sale.find({});
     return allSales;
   } catch (error) {
     throw new Error(error.message);
@@ -16,8 +16,7 @@ export const addSale = async (newsale) => {
     if (sale) {
       const addedsale = await sale.save();
 
-      const userId = newsale.userId;
-      const allSales = await getSales(userId);
+      const allSales = await getSales();
 
       return allSales;
     } else {
@@ -35,8 +34,7 @@ export const updateSale = async (itemId, newData) => {
     });
 
     if (updatedSale) {
-      const userId = updatedSale.userId;
-      const allSales = await getSales(userId);
+      const allSales = await getSales();
       return allSales;
     } else {
       throw new Error("Failed to update sale item!");
@@ -54,8 +52,7 @@ export const deleteSale = async (itemId) => {
     );
 
     if (deletedSale) {
-      const userId = deletedSale.userId;
-      const allSales = await getSales(userId);
+      const allSales = await getSales();
       return allSales;
     } else {
       throw new Error("Failed to delete sale item!");

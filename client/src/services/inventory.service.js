@@ -7,11 +7,11 @@ import {
 
 const API_URL = "https://inventory-management-ae62.onrender.com/inventory";
 
-export const getAllInventories = async (userId, dispatch) => {
+export const getAllInventories = async (dispatch) => {
   try {
     dispatch(setInventoriesLoading(true));
 
-    const response = await axios.get(`${API_URL}/${userId}`);
+    const response = await axios.get(`${API_URL}`);
 
     if (response.status === 200) {
       const inventories = response.data.inventories;

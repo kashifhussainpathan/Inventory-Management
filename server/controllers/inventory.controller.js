@@ -1,8 +1,8 @@
 import Inventory from "../models/inventory.model.js";
 
-export const getInventories = async (userId) => {
+export const getInventories = async () => {
   try {
-    const allInventories = await Inventory.find({ userId });
+    const allInventories = await Inventory.find({});
     return allInventories;
   } catch (error) {
     throw new Error(error.message);
@@ -16,8 +16,7 @@ export const addInventory = async (newInventory) => {
     if (inventory) {
       const addedInventory = await inventory.save();
 
-      const userId = newInventory.userId;
-      const allInventories = await getInventories(userId);
+      const allInventories = await getInventories();
       return allInventories;
     } else {
       throw new Error("Failed to create inventory!");
@@ -36,8 +35,7 @@ export const updateInventory = async (itemId, newData) => {
     );
 
     if (updatedInventory) {
-      const userId = updatedInventory.userId;
-      const allInventories = await getInventories(userId);
+      const allInventories = await getInventories();
       return allInventories;
     } else {
       throw new Error("Failed to update inventory item!");
@@ -55,8 +53,7 @@ export const deleteInventory = async (itemId) => {
     );
 
     if (deletedInventory) {
-      const userId = deletedInventory.userId;
-      const allInventories = await getInventories(userId);
+      const allInventories = await getInventories();
       return allInventories;
     } else {
       throw new Error("Failed to delete inventory item!");
