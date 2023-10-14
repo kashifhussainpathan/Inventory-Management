@@ -8,6 +8,7 @@
 }
 
 .navbar-links a {
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   color: var(--text-color);
+  font-weight: 600;
 }

@@ -33,12 +33,13 @@ const Inventory = () => {
 
         <div>
           <table>
-            <thead>
+            <thead className="heading-row">
               <tr>
                 <th>Sn. No.</th>
                 <th>Name</th>
                 <th>Quantity </th>
                 <th>Price</th>
+                <th>Total Price</th>
                 <th>Update</th>
               </tr>
             </thead>
@@ -50,6 +51,7 @@ const Inventory = () => {
                     <td>{item.name}</td>
                     <td>{item.quantity}</td>
                     <td>{item.price}</td>
+                    <td>{item.price * item.quantity}</td>
 
                     <td>
                       <div className="tableBtn">
@@ -73,6 +75,23 @@ const Inventory = () => {
                 );
               })}
             </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td className="total">Total :-</td>
+                <td>
+                  <b>
+                    {inventories?.reduce(
+                      (acc, { price, quantity }) => acc + price * quantity,
+                      0
+                    )}
+                  </b>
+                </td>
+                <td></td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

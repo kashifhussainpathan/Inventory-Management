@@ -30,7 +30,7 @@ const Sale = () => {
 
       <div>
         <table>
-          <thead>
+          <thead className="heading-row">
             <tr>
               <th>Sn. No.</th>
               <th>Description</th>
@@ -62,6 +62,16 @@ const Sale = () => {
               );
             })}
           </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td className="total">Total :-</td>
+              <td>
+                <b>{sales?.reduce((acc, { amount }) => acc + amount, 0)}</b>
+              </td>
+              <td></td>
+            </tr>
+          </tfoot>
         </table>
       </div>
     </div>

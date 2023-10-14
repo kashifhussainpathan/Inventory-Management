@@ -150,6 +150,16 @@ thead {
   cursor: pointer;
 }
 
+.heading-row {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border: 1px solid var(--background-color);
+}
+
+.total {
+  font-weight: 600;
+}
+
 /* app styles */
 
 .app {
