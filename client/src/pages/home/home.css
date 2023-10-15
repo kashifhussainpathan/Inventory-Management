@@ -1,3 +1,21 @@
 .home h1 {
   text-align: center;
 }
+
+.home-report-inputs {
+  width: 150px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.home-repots {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-repots h3 {
+  text-align: right;
+}
