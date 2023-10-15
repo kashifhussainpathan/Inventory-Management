@@ -2,7 +2,7 @@ import "./home.css";
 import React, { useState } from "react";
 import { salesState } from "../../actions/sale.action";
 import InventoryReport from "../../components/reports/InventoryReport";
-import SalesReport from "../../components/reports/salesReport";
+import SalesReport from "../../components/reports/SalesReport";
 
 const Home = () => {
   const sales = salesState("sales");
