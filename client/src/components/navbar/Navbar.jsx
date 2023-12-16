@@ -12,6 +12,12 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/sale">Sale</NavLink>
         <NavLink to="/inventory">Inventory</NavLink>
+        <a
+          href="https://github.com/kashifhussainpathan/Inventory-Management"
+          target="_blank"
+        >
+          Github
+        </a>
       </div>
     </div>
   );
